@@ -1,0 +1,61 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local env & secrets (credentials stored in encrypted vault only!)
+.env
+.env.local
+.env.*.local
+accounts.json
+accounts.example.json
+
+# OTP inbox (may contain raw SMS codes)
+.otp_inbox.txt
+*.otp_inbox
+
+# Encrypted vault
+*.vault.enc
+
+# Cryptographic materials
+.vault.key
+
+# Data / reports
+*.csv
+*.xlsx
+*.json
+!kavir_session.json
+
+# Logs
+*.log
+*.log.*
+
+# Media assets
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.mp4
+*.webm
+
+# Package exports
+kavir_tires_bot_package.zip
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+coverage/
+.coverage
+htmlcov/
