@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  tires_bot:
+    build: .
+    container_name: kavir_tires_bot
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Tehran
+      - TIRES_BASE_URL=https://kavirtire.ir
+      - TIRES_PRODUCT_ID=185/65R14
+      - TIRES_OTP_PROVIDER=mock
+      # For production Iran proxy:
+      # - TIRES_PROXY=http://iran-proxy.internal:8080
+    volumes:
+      - ./data:/app/data
+      - ./tires_bot.log:/app/tires_bot.log
+      - ./.vault.enc:/app/.vault.enc:ro
+      - ./.vault.key:/app/.vault.key:ro
